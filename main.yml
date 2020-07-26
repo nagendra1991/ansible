@@ -1,0 +1,10 @@
+---
+  - name: "Playing with Ansible and Git"
+    hosts: localhost
+    connection: local
+    tasks:
+
+    - name: "check version"
+      shell: "git --version"
+      register: "output"
+    - debug: var=output.stdout_lines
